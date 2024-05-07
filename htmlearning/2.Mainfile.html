@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equip="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale1.0">
+    <title>Document</title>
+    <style>
+        /* Your existing CSS styles here */
+            
+     
+    
+        *{
+    
+    padding: 0;
+
+    margin: 0;
+
+    box-sizing: border-box;
+
+    background-size: cover;
+
+
+
+}
+
+
+
+/* CSS for the header */
+
+
+
+.header {
+
+    margin-top: 10px;
+
+    margin-left: 10px;
+
+    margin-right: 10px;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    background-size: cover;
+
+    border: 5px;
+
+    color: #959292;
+
+    padding: 3px;
+
+    border: 5px;
+
+    text-align: left;
+
+    text-size-adjust: 44px;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    justify-content: center;
+
+    border-radius: 15px;
+
+    font-weight: lighter;
+
+
+
+}
+
+
+
+/* CSS for the navigation menu */
+
+
+
+nav {
+
+    display: flex;
+
+    justify-content: right;
+
+}
+
+
+
+nav ul {
+
+    list-style-type: disc;
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+
+
+nav li {
+
+    margin: 0 20px;
+
+    display: inline-block;
+
+}
+
+
+
+nav a {
+
+    text-decoration: none;
+
+    color: #9d9898f0;
+
+    font-weight: bold;
+
+    transition: color 0.3s;
+
+}
+
+
+
+nav a:hover {
+
+    color: #4298a9ea;
+
+}
+
+
+
+.main{
+
+
+
+    width: 100%;
+
+    height: 100vh;
+
+    background: url("828812007e1f0c5019ae46f4a29bcda2.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+
+
+    overflow: hidden;
+
+
+
+}
+
+.shade{
+
+
+
+    width: 100%;
+
+    height: 100%;
+
+    background-color:rgba(0, 0, 0, 0.3);
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+
+.overlay{
+
+    color: rgba(0, 0, 0, 0.7);
+
+}
+
+
+
+.title{
+
+    margin-top: 40px;
+
+    font-family: cursive;
+
+    text-decoration: none;
+
+    text-decoration-color: rgb(233, 203, 164);
+
+    color: rgb(223, 198, 166);
+
+    font-style: oblique;
+
+    font-weight: lighter;
+
+    font-size: 50px;
+
+    text-align: center;  
+
+}
+
+
+
+.date{
+
+    margin-top: 40px;
+
+    font-family: 'Segoe UI';
+
+    color:rgb(217, 187, 153);
+
+    font-style: oblique;
+
+    font-weight: 400;
+
+    font-size: xx-large;
+
+    text-align: center;
+
+
+
+}
+
+
+
+.col{
+
+   
+
+
+
+    width: 1000px;
+
+    height: 200px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content:center;
+
+    align-items: center;
+
+ 
+
+   
+
+}
+
+
+
+input{
+
+
+
+    width: 50%;
+
+    height: 70px;
+
+    border-width: 3px;
+
+    border-color: rgba(2, 2, 2, 0.522);
+
+    background-color: rgba(0, 0, 0, 0.3);
+
+    border-radius: 20px;
+
+    border-bottom: 1px;
+
+    border-right: 1px;
+
+    text-align: center;
+
+    font-size:40px ;
+
+    color: rgba(234, 228, 228, 0.937);
+
+    font-style: italic;
+
+    font-family: calibri;
+
+    margin-top: 60px;
+
+   
+
+}
+
+
+
+.col div {
+
+    text-align: center;
+
+    font-family: Arial;
+
+    color: rgb(255, 228, 196);
+
+   
+
+}
+
+
+
+
+        .start-button {
+            display: flex;
+            background-color: rgba(0, 0, 0, 0.3);
+            margin-left: 1100px;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px;
+            border-color: black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="shade">
+            <div class="overlay">
+                <div class="header">
+                    <h1 id="Home">Fourhandclock</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="./3.Aboutus.html">About Us</a></li>
+                            <li><a href="./4.Disclaimer.html">Disclaimer</a></li>
+                            
+                        </ul>
+                    </nav>
+                </div>
+                <div class="title">We're Getting closer</div>
+                <div class="date" id="end-date">
+                    <label for="date">End Date:</label>
+                    <input type="date" id="date" value="">
+                    <br>
+                    <label for="time">End Time:</label>
+                    <input type="time" id="time" value="">
+                </div><br><br>
+                <button class="start-button" onclick="startCountdown()">Start Countdown</button>
+                <div class="col">
+                    <div>
+                        <input type="text" readonly id="days" value="">
+                        <br />
+                        <label for="">Days</label>
+                    </div>
+                    <div>
+                        <input type="text" readonly id="hours" value="">
+                        <br />
+                        <label for="">Hours</label>
+                    </div>
+                    <div>
+                        <input type="text" readonly id="minutes" value="">
+                        <br />
+                        <label for="">Minutes</label>
+                    </div>
+                    <div>
+                        <input type="text" readonly id="seconds" value="">
+                        <br />
+                        <label for="">Seconds</label>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        const endDateInput = document.getElementById("date");
+        const endTimeInput = document.getElementById("time");
+        const daysInput = document.getElementById("days");
+        const hoursInput = document.getElementById("hours");
+        const minutesInput = document.getElementById("minutes");
+        const secondsInput = document.getElementById("seconds");
+
+        function startCountdown() {
+            // Check if the entered date and time are valid
+            const endDate = new Date(`${endDateInput.value} ${endTimeInput.value}`);
+            const now = new Date();
+
+            if (isNaN(endDate.getTime()) || endDate < now) {
+                alert("Please enter a valid future date and time.");
+                return;
+            }
+
+            setInterval(() => {
+                const diff = Math.max((endDate - new Date()) / 1000, 0); // calculates in seconds
+
+                daysInput.value = Math.floor(diff / 3600 / 24);
+                hoursInput.value = Math.floor((diff / 3600) % 24);
+                minutesInput.value = Math.floor((diff / 60) % 60);
+                secondsInput.value = Math.floor(diff % 60);
+            }, 1000);
+
+            // Disable the inputs and button after starting the countdown
+            endDateInput.disabled = true;
+            endTimeInput.disabled = true;
+            document.querySelector('.start-button').disabled = true;
+        }
+    </script>
+</body>
+
+</html>
+
+

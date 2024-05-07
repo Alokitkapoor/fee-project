@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equip="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Slidestyles2.css"> 
+</head>
+
+<body>
+
+
+    <div class="sidenav">
+      <div class ="comps">
+        
+        <a href="#faq-section">FAQs</a>
+        <a href="#application-version">App version</a>
+      </div>
+         <!-- Add more options as needed -->
+      <div class = "btns">
+        
+        <button id="moveToTopButton">Move to Top</button>
+        <button id="resetTimerButton">Reset Timer</button>
+        <button onclick="signOut()" class="sigob">Sign Out</button>
+        
+      </div>
+              
+
+
+
+          
+    </div>
+    
+    <div class="netbackcolor">
+
+        
+
+
+    
+    <div class="main">
+        <div class="gradient">
+
+
+
+
+
+
+            <div class="header">
+
+                <h1 id="Home">⏱️Four Hand Clock</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#footer-about-us">About Us</a></li>
+                        
+                        <!-- <li><a href="./3.Aboutus.html">About Us</a></li> -->
+                        <li><a href="#footer-Disclaimer">Disclaimer</a></li>
+                        <li><a href="#contact-us-section">Contact Us</a></li>
+                        
+                    </ul>
+                </nav>
+            </div>
+
+
+
+            <div class="overlay">
+
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+            
+                <div class="title">Let's do it on time </div>
+
+
+                <div class="date" id="end-date">
+                    <input type="text" id="date" placeholder="Deadline date" onfocus="(this.type='date')">
+                    
+                    <br>
+                    <input type="text" id="time" placeholder="Specific time" onfocus="(this.type='time')">
+                </div> <br> <br>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+                <button class="start-button" onclick="startCountdown()">Start Countdown</button>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+                
+
+                    <div class="col">
+                    <div>
+                        <input type="text" readonly id="days" value="" class="countdown-digits">
+                        <br />
+                        <label for="">Days</label>
+                    </div>
+                    <div>
+                        <input type="text" readonly id="hours" value="" class="countdown-digits">
+                        <br />
+                        <label for="">Hours</label>
+                    </div>
+                    <div>
+                        <input type="text" readonly id="minutes" value="" class="countdown-digits">
+                        <br />
+                        <label for="">Minutes</label>
+                    </div>
+                    <div>
+                        <input type="text" readonly id="seconds" value="" class="countdown-digits">
+                        <br />
+                        <label for="">Seconds</label>
+                    </div>
+
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    
+
+
+
+
+     
+    <footer>
+
+        <div class="footer-content">
+          
+          <div class="social-links">
+            <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer">
+              <img src="facebook-logo.png" alt="Facebook" class="logos">
+            </a>
+      
+            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+              <img src="google-logo.png" alt="Google" class="logos">
+            </a>
+      
+            <a href="https://www.twitter.com/yourhandle" target="_blank" rel="noopener noreferrer">
+              <img src="twitterr-logo.png" alt="Twitter" class="logos">
+            </a>
+      
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+              <img src="linkedin-logo.png" alt="LinkedIn" class="logos" >
+            </a>
+
+            
+          </div>
+
+          <div id="footer-about-us">
+            <!-- About Us content goes here -->
+            <div class="about-us-section">
+                <h2> About Us</h2>
+                <p2><center>
+                    Welcome to Four Hand Clock, your premier countdown timer application designed to enhance your time management experience. At Four Hand Clock, we understand the value of time in our fast-paced lives, and our commitment is to provide you with a seamless and user-friendly platform to track and manage your precious moments effectively.
+                    
+                    Our app is crafted with precision and passion, offering you a visually appealing and intuitive interface. Whether you're counting down to an important event, tracking deadlines, or simply enjoying the anticipation of upcoming occasions, Four Hand Clock is your go-to solution. We prioritize accuracy and reliability, ensuring that our countdowns reflect the time remaining with utmost precision. Explore the features designed to make your countdown experience enjoyable and stress-free, and let Four Hand Clock become your trusted companion in navigating the ticking clock of life.   </center></p2>
+            </div>
+          </div>
+          <div id="footer-Disclaimer">
+
+            <div class="Disclaimer">
+                <h2> Disclaimer </h2>
+                <p2><center> This countdown timer application is designed for general use and entertainment purposes only. While we strive to provide accurate and reliable countdowns, we cannot guarantee the precision of the displayed time due to factors beyond our control, such as network delays, device performance, and other technical considerations. Users are advised to use this application responsibly and not solely rely on it for critical events or time-sensitive activities. The developers disclaim any liability for inaccuracies, errors, or unforeseen disruptions that may occur while using the countdown timer. Users are encouraged to verify important timings independently and exercise caution in relying on this application for critical deadlines or events.</center></p2>
+            </div>
+
+          </div>
+
+
+
+            <div id="contact-us-section">
+             <div class ="helo">
+                <h2><center>Contact Us </center> </h2>
+                <p2><center>Welcome to Four Hand Clock! We value your feedback, questions, and suggestions. If you have any inquiries or need assistance, please feel free to reach out to us through the following channels:</center></p2>
+            
+                <div class="contact-options">
+                    <p3>Email:   <a href=" mailto:info@fourhandclock.com">info@fourhandclock.com</a></p3>
+                    <p3>Phone: +1 (555) 123-4567</p3>
+                    <p3>Address: 123 Countdown Street, Cityville, State, 12345</p3>
+                </div>
+            
+                <p2><center>For business inquiries or partnership opportunities, please contact our business development team at<br> <a href="mailto:partnerships@fourhandclock.com">partnerships@fourhandclock.com</a>.</center></p2>
+            
+            
+             </div>
+            </div>
+
+
+            <div id="faq-section">
+                <h2>Frequently Asked Questions</h2>
+    
+                <div class="faq">
+                    <button class="question" onclick="toggleAnswer(1)">What is Four Hand Clock?</button>
+                    <div class="answer" id="answer1"><center>Four Hand Clock is a countdown timer app designed to help users track and manage their time effectively. It provides a user-friendly interface and various features for creating and customizing countdowns for different events and occasions.</center></div>
+                </div>
+    
+                <div class="faq">
+                    <button class="question" onclick="toggleAnswer(2)">How do I start a countdown?</button>
+                    <div class="answer" id="answer2"><center>To start a countdown, enter the deadline date and specific time in the provided input fields. Click the "Start Countdown" button, and the app will display the time remaining in days, hours, minutes, and seconds.</center></div>
+                </div>
+    
+                <!-- Add more FAQs as needed -->
+
+    
+            </div>
+            <div id="application-version">
+                <p123> Application Version: 1.0.0 </p123>
+                <p234> Last Updated: January 15, 2023 </p234><br>
+                <p345>&copy; 2023 Four Hand Clock. All Rights Reserved.</p345>
+            </div>
+
+
+
+
+        
+
+          </div>
+          
+      </footer>
+
+
+      
+
+    </div>
+    <script>
+        const endDateInput = document.getElementById("date");
+        const endTimeInput = document.getElementById("time");
+        const daysInput = document.getElementById("days");
+        const hoursInput = document.getElementById("hours");
+        const minutesInput = document.getElementById("minutes");
+        const secondsInput = document.getElementById("seconds");
+        let countdownInterval;
+
+        function startCountdown() {
+            // Clear any existing interval to avoid multiple intervals running simultaneously
+            clearInterval(countdownInterval);
+
+            // Check if the entered date and time are valid
+            const endDate = new Date(`${endDateInput.value} ${endTimeInput.value}`);
+            const now = new Date();
+
+            if (isNaN(endDate.getTime()) || endDate < now) {
+                alert("Please enter a valid future date and time.");
+                return;
+            }
+
+            countdownInterval = setInterval(() => {
+                const diff = Math.max((endDate - new Date()) / 1000, 0); // calculates in seconds
+
+                daysInput.value = Math.floor(diff / 3600 / 24);
+                hoursInput.value = Math.floor((diff / 3600) % 24);
+                minutesInput.value = Math.floor((diff / 60) % 60);
+                secondsInput.value = Math.floor(diff % 60);
+            }, 1000);
+
+            // Disable the inputs and button after starting the countdown
+            endDateInput.disabled = true;
+            endTimeInput.disabled = true;
+            document.querySelector('.start-button').disabled = true;
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the "Move to Top" and "Reset Timer" button elements
+            var moveToTopButton = document.getElementById('moveToTopButton');
+            var resetTimerButton = document.getElementById('resetTimerButton');
+
+            // Add click event listener for "Move to Top" button
+            moveToTopButton.addEventListener('click', function () {
+                // Scroll to the top of the page smoothly
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Add click event listener for "Reset Timer" button
+            resetTimerButton.addEventListener('click', function () {
+                // Enable the inputs and "Start Countdown" button
+                endDateInput.disabled = false;
+                endTimeInput.disabled = false;
+                document.querySelector('.start-button').disabled = false;
+
+                // Reset the input values to their initial state
+                endDateInput.value = '';
+                endTimeInput.value = '';
+                daysInput.value = '';
+                hoursInput.value = '';
+                minutesInput.value = '';
+                secondsInput.value = '';
+
+                // Clear the countdown interval
+                clearInterval(countdownInterval);
+            });
+        });
+    </script>
+    <script>
+        function toggleAnswer(faqNumber) {
+            var answer = document.getElementById('answer' + faqNumber);
+            answer.style.display = (answer.style.display === 'none' || answer.style.display === '') ? 'block' : 'none';
+        }
+    </script>
+
+<script>
+    function signOut() {
+        // Clear any existing interval if the timer is running
+        clearInterval(countdownInterval);
+
+        // Enable the inputs and "Start Countdown" button
+        endDateInput.disabled = false;
+        endTimeInput.disabled = false;
+        document.querySelector('.start-button').disabled = false;
+
+        // Reset the input values to their initial state
+        endDateInput.value = '';
+        endTimeInput.value = '';
+        daysInput.value = '';
+        hoursInput.value = '';
+        minutesInput.value = '';
+        secondsInput.value = '';
+
+        // Redirect to the sign-in page
+        window.location.href = '1.thesihninpage.html';
+
+        // Show a sign-out success message (you may use a more sophisticated alert or notification)
+        alert('Signed Out Successfully');
+    }
+</script>
+
+
+
+</body>
+
+</html>
+
+

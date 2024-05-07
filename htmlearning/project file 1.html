@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang ="en">
+
+<head>
+
+    <meta charset="UTF-8">  <!--it is used to indicate web page character encoding (chr encoding converts bites into characters)-->
+    <meta http-equip="X-UA-Compatible" content="IE=edge">  <!--used to force internet explorer IE to use latest rendering engine-->
+    <meta name ="viewport" content="width=device-width, initial-scale1.0">  <!--render images to screen width and sets initial zoom-->
+    <title> Document</title><!-- (*) in styling is a universal selector applies on all elements-->
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            background-size: cover;
+
+        }
+
+        /* CSS for the header */
+
+        .header {
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            background-size: cover;
+            border: 5px;
+            color: #959292;
+            padding: 3px;
+            border: 5px;
+            text-align: left;
+            text-size-adjust: 44px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            justify-content: center;
+            border-radius: 15px;
+            font-weight: lighter;
+
+        }
+
+        /* CSS for the navigation menu */
+
+        nav {
+            display: flex;
+            justify-content: right;
+        }
+
+        nav ul {
+            list-style-type: disc;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            margin: 0 20px;
+            display: inline-block;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #9d9898f0;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #4298a9ea;
+        }
+        
+        .main{
+
+            width: 100%;
+            height: 100vh;
+            background: url("texture-wallpaper-20070911473722.jpg");
+            background-size: cover;
+            background-position: center;
+
+            overflow: hidden;
+        
+        }
+        .shade{
+
+            width: 100%;
+            height: 100%;
+            background-color:rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .overlay{
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        .title{
+            margin-top: 40px;
+            font-family: cursive;
+            text-decoration: none;
+            text-decoration-color: rgb(233, 203, 164);
+            color: rgb(223, 198, 166);
+            font-style: oblique;
+            font-weight: lighter;
+            font-size: 60px;
+            text-align: center;  
+        }
+
+        .date{
+            margin-top: 40px;
+            font-family: 'Segoe UI';
+            color:rgb(217, 187, 153);
+            font-style: oblique;
+            font-weight: 500;
+            font-size: xx-large;
+            text-align: center;
+
+        }
+
+        .col{
+            
+
+            width: 1000px;
+            height: 200px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+            
+        }
+
+        input{
+
+            width: 50%;
+            height: 70px;
+            border-width: 3px;
+            border-color: rgba(2, 2, 2, 0.522);
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            border-bottom: 1px;
+            border-right: 1px;
+            text-align: center;
+            font-size:40px ;
+            color: rgba(234, 228, 228, 0.937);
+            font-style: italic;
+            font-family: calibri;
+            margin-top: 60px;
+            
+        }
+
+        .col div {
+            text-align: center;
+            font-family: Arial;
+            color: rgb(255, 228, 196);
+            
+        }
+
+
+    </style>
+
+</head> 
+<body>
+    
+
+
+    <div class="main"><!-- this is a parent box-->
+        <div class="shade">
+            <div class="overlay">
+                <div class = "header">
+                    <h1 id="Home">Fourhandclock</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="#Home">Home</a></li>
+                            <li><a href="./Aboutus.html">About Us</a></li>
+                            <li><a href="#Disclaimer">Disclaimer</a></li>
+                            <li><a href="#Contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class ="title">We're Getting closer</div>
+                <div class="date" id="end-date"> 9 october 2023 10:00 PM </div>
+                <div class="col">
+                    <div>
+                        <input type="text" readonly value="0">
+                        <br/>
+                        <label for="">Days</label>
+                    </div>
+                    <div>
+                        <input type="text" readonly value="0">
+                        <br/>
+                        <label for="">Hours</label>
+                    </div>
+                    <div>
+                        <input type="text" readonly value="0">
+                    </br>
+                        <label for="">Minutes</label>
+                    </div>
+                    <div>
+                        <input type="text" readonly value="0">
+                    </br>
+                        <label for="">Seconds</label>
+                    </div>
+                </div>
+        </div><!--this is a child box-->
+    </div><!-- div defines a section of an html document it is used as an container styled with css and manuplated with java script-->
+
+    <script language="javascript">
+        
+        const endDate = "23 december 2023 12:10 PM"
+        document.getElementById("end-date").innerText = endDate;
+        const inputs = document.querySelectorAll("input")
+
+        function clock(){
+            const end = new Date(endDate)
+            const now = new Date()
+            const diff = (end-now)/1000;// calculates in seconds
+            console.log(diff); 
+            inputs[0].value =Math.floor(diff/3600/24);//calculate in days
+            inputs[1].value =Math.floor((diff/3600)%24);
+            inputs[2].value =Math.floor((diff/60)%60);
+            inputs[3].value =Math.floor(diff%60);
+        }
+        // initial call only when page refreshes
+        clock()
+
+        setInterval(
+            () => {
+                clock()
+            },
+            1000
+
+        )
+
+    </script>       
+</body>   
+</html>
